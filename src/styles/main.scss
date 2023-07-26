@@ -1,6 +1,12 @@
 // import font 
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Lumanosimo&family=Mochiy+Pop+P+One&display=swap');
 
+$font-family-lumanisimo: 'Lumanosimo', cursive;
+$font-family-dongle: 'Dongle', sans-serif;
+$font-family-pop: 'Mochiy Pop P One', sans-serif;
+
+
+$spacing-navlink: 24px;
 
 
 .header {
@@ -8,7 +14,73 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border: 1px solid red;
+        padding: 20px 10px ;
+        .all-nav {
+            flex-basis: 2;
+
+            ul {
+                display: flex;
+                align-items: center;
+                list-style: none;
+                gap: $spacing-navlink;
+                
+                li {
+                    .nav-item {
+                        display: flex;
+                        flex-direction: column;
+
+                        a {
+                            font-size:22px ;
+                            font-family: $font-family-dongle;
+                            font-weight: normal;
+                            text-decoration: none;
+                            color: black;
+                            &:hover {
+                                cursor: pointer;
+
+                            }
+                        }
+                        hr {
+                            margin-top: -8px;
+                            border: 0;
+                            border-bottom: 1px solid black;
+                            
+                            // border-top: 1px solid black;
+                        }
+                    }
+
+                    &:hover{
+                        hr {
+                            border-bottom: 1px solid orangered;
+                            transition: 0.5s ease-in;
+                            transform-origin: right;
+                            transition-duration: 0.5s;
+                        }
+                    }
+                }
+            }
+        }
+
+        .logo {
+            flex-basis: 1;
+            a {
+                text-decoration: none;
+                color: black;
+
+                p {
+                    font-family: $font-family-lumanisimo;
+                    line-height: normal;
+                    font-weight: 550;
+                    font-size: 30px;
+                    letter-spacing: 12px;
+                }
+            }
+        }
     }
     
+}
+
+.indicator{
+    padding: 10px;
+    color: lightgray;
 }

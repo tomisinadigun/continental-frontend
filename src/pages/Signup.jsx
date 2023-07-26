@@ -1,8 +1,12 @@
 import React from 'react'
-
+import Header from '../components/Header'
+import Indicator from '../components/Indicator'
 const Signup = () => {
   return (
-    <div>Signup</div>
+    <div>
+        <Header />
+        <Indicator>Sign Up</Indicator>
+    </div>
   )
 }
 
