@@ -142,7 +142,7 @@ $spacing-navlink: 24px;
             height: 100%;
             
             div {
-                
+                padding: 0px 110px;
                 h1 {
                     font-family: $font-family-pop;
                     letter-spacing: 3px;
@@ -156,13 +156,16 @@ $spacing-navlink: 24px;
                 font-size: 36px;
                 padding: 0px 32px;
                 border: none;
-                background-color:  #743ab5;
+                // background-color:  #743ab5;
+                background-color: black;
                 color: white;
                 margin-top: 52px;
                 border-radius: 10px 10px 10px 10px;
+                transition: 0.3s;
                 &:hover {
                     cursor: pointer;
                     background-color: #46088c;
+                    transition: 0.5s;
                 }
             }
         }
