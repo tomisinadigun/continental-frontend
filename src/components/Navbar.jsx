@@ -8,9 +8,9 @@ const Navbar = () => {
         <nav className='nav-bar'>
             <div className="left-nav all-nav">
                 <ul>
-                    <li><div className='nav-item'><a>Shop Bands</a><hr /></div></li>
-                    <li><div className='nav-item'><a>Try-On kit</a><hr /></div></li>
-                    <li><div className='nav-item'><a>More Info</a><hr /></div></li>
+                    <li><div className='nav-item'><a>Properties</a><hr /></div></li>
+                    <li><div className='nav-item'><a>Properties</a><hr /></div></li>
+                    <li><div className='nav-item'><a>Contact us</a><hr /></div></li>
                 </ul>
             </div>
             <div className="logo"><Link to="/"><p>CONTINENTAL</p></Link></div>
@@ -24,7 +24,7 @@ const Navbar = () => {
                     </li>
                     <li>
                         <div className="nav-item">
-                            <Link to="/cart">Shopping Bag</Link>
+                            <Link to="/cart">Wish List</Link>
                             <hr />
                         </div>
                     </li> 

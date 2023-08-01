@@ -8,7 +8,7 @@ import './styles/main.scss'
 function App() {
 
   return (
-    <>
+    <div className='app'>
 
 
 
@@ -17,7 +17,7 @@ function App() {
         <Route path='/sign_up' element={<Signup />} />
         <Route path='/cart' element={<Cart />} />
       </Routes>
-    </>
+    </div>
   )
 }
 
