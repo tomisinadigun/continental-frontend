@@ -11,7 +11,7 @@ const Home = () => {
     <div>
         <div className="home">
             <Header />
-            <Indicator>Home</Indicator>
+            {/* <Indicator>Home</Indicator> */}
             <div className='home-inner'>
               <Banner />
               <Title >Houses on island</Title>
