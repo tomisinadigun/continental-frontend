@@ -269,6 +269,10 @@ $spacing-navlink: 24px;
             
             div {
                 text-align: center;
+                @include tablets {
+                    text-align: left;
+                    padding-inline: 10px;
+                }
                 button {
                     background-color: white;
                     font-family: $font-family-pop;
