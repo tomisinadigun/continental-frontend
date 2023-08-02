@@ -11,6 +11,28 @@ $color-primary:#46088c;
 $spacing-navlink: 24px;
 
 
+@mixin mobile {
+    @media screen and (max-width:480px) {
+        @content
+    }
+}
+
+@mixin tablets {
+    @media screen and (max-width:768px) {
+        @content
+    }
+}
+
+@mixin laptop {
+    @media screen and (max-width:1200px) {
+        @content
+    }
+}
+
+
+
+
+
 .header {
     .top-bar {
         display: flex;
@@ -41,6 +63,9 @@ $spacing-navlink: 24px;
         padding: 20px 10px ;
         .all-nav {
             flex-basis: 2;
+            @include tablets{
+                display: none;
+            }
 
             ul {
                 display: flex;
@@ -87,6 +112,10 @@ $spacing-navlink: 24px;
 
         .logo {
             flex-basis: 1;
+            @include tablets{
+                width: 100%;
+                text-align: center;
+            }
             a {
                 text-decoration: none;
                 color: black;
@@ -108,17 +137,26 @@ $spacing-navlink: 24px;
     top: 32px;
     padding: 10px;
     color: lightgray;
+    @include tablets{
+        top: 52px;
+    }
 }
 
 .home {
     // position: relative;
     .home-inner {
         padding-inline: 42px;
+        @include tablets{
+            padding-inline: 0px;
+        }
     }
     .banner-main {
         border-radius: 8px;
         overflow: hidden;
         position: relative;
+        @include tablets{
+            border-radius: 0px;
+        }
         .banner-container {
             background-color: rgba(0, 0, 0, 0.1);
             display: flex;
@@ -190,7 +228,7 @@ $spacing-navlink: 24px;
     gap: 8px;
     padding:8px 8px;
     height: fit-content;
-    margin-top: 20px;
+    margin-top: 10px;
     background-color: rgb(211, 211, 211, 0.2);
     border-radius: 8px;
     .item {
@@ -201,7 +239,6 @@ $spacing-navlink: 24px;
         background-color: white;
 
         .item-img {
-            // box-shadow: 0px 0px 2px 3px rgb(211, 211, 211, 0.4);
             border-radius: 10px 10px 0px 0px;
             img {
                 width: 240px;
@@ -255,7 +292,7 @@ $spacing-navlink: 24px;
             position: absolute;
             top: 0;
             background-color: white;
-            width: 260px;
+            width: 240px;
             padding: 20px 20px;
             box-shadow: 0px 0px 2px 3px rgb(211, 211, 211, 0.4);
             border-radius: 5px 5px 5px 5px;
@@ -290,6 +327,20 @@ $spacing-navlink: 24px;
                     color: black;
                 }
             }
+        }
+    }
+}
+
+.cat-title {
+    padding-block: 10px;
+    padding-inline: 10px;
+    margin-top: 40px;
+    background-color: rgb(211, 211, 211, 0.2);
+    p {
+        font-family: $font-family-pop;
+        color: $color-primary;
+        @include tablets{
+            text-align: center;
         }
     }
 }

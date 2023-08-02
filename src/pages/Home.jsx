@@ -4,6 +4,7 @@ import Indicator from '../components/Indicator'
 import Banner from '../components/Banner'
 import Item from '../components/Item'
 import ItemList from '../components/ItemList'
+import Title from '../components/Title'
 
 const Home = () => {
   return (
@@ -13,7 +14,10 @@ const Home = () => {
             <Indicator>Home</Indicator>
             <div className='home-inner'>
               <Banner />
+              <Title >Houses on island</Title>
               <ItemList />
+
+              <Title >Houses on main land</Title>
               <ItemList />
             </div>
         </div>

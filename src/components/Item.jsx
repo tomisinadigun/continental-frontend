@@ -32,7 +32,7 @@ const Item = () => {
             
             <div className='info-item'>
                 <span>Location:</span>
-                <p>7520 Pembina High...</p>
+                <p>7520 Pembina Hw...</p>
             </div>
             <div className='info-item'>
                 <span>City:</span>
