@@ -312,6 +312,9 @@ $spacing-navlink: 24px;
             @include tablets{
                 width: 406px;
             }
+            @include mobile{
+                width: 310px;
+            }
             .info-item {
                 display: flex;
                 justify-content: space-between;
