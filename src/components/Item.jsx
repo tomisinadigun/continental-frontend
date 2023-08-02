@@ -17,8 +17,8 @@ const Item = () => {
     }
     
   return (
-    <div className="item" onMouseOver={handleItemDetail} onMouseLeave={handleResetActive}>
-        <div className='item-img' >
+    <div className="item" >
+        <div className='item-img' onMouseOver={handleItemDetail} onMouseLeave={handleResetActive} >
             <img src="https://media.istockphoto.com/id/109350275/photo/modern-living-room-and-patio-next-to-swimming-pool.jpg?b=1&s=612x612&w=0&k=20&c=JVIeJdIKry9VUDVhi-EJkznRidFLOjyy4W4LMocv0U8=" alt="" />
         </div>
         <div className={showActionBtn ? " decision-btns show-action-btns" : " decision-btns hide-action-btns" }>
