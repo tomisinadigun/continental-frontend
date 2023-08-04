@@ -143,7 +143,6 @@ $spacing-navlink: 24px;
 }
 
 .home {
-    // position: relative;
     .home-inner {
         padding-inline: 42px;
         @include tablets{
@@ -206,7 +205,6 @@ $spacing-navlink: 24px;
                 font-size: 36px;
                 padding: 0px 32px;
                 border: none;
-                // background-color:  #743ab5;
                 background-color: black;
                 color: white;
                 margin-top: 52px;
@@ -238,9 +236,7 @@ $spacing-navlink: 24px;
         padding: 8px 8px;
     }
     .item {
-        // border: 1px solid black;
         padding: 30px 30px;
-        // border-radius: 10px 10px 0px 0px;
         position: relative;
         background-color: white;
         @include mobile {
@@ -280,7 +276,6 @@ $spacing-navlink: 24px;
                     font-family: $font-family-pop;
                     padding: 10px 28px;
                     border: none;
-                    // border-radius: 5px;
                     color: white;
                     background-color: rgb(0, 0, 0, 0.5);
                     &:hover {
@@ -294,7 +289,6 @@ $spacing-navlink: 24px;
             border-radius: 0px 0px 0px 0px;
             padding: 0px 10px;
             width:240px;
-            // position: absolute;
             top:0px;
             background-color:black;
             @include tablets{
@@ -402,5 +396,19 @@ $spacing-navlink: 24px;
 @keyframes anim-action-btns {
     from{opacity: 0;}
     to{opacity: 1;}
+}
+
+// fix navbar 
+.adjust-bar {
+    height: 120px;
+}
+
+
+
+.fix-nav-bar{
+    position: fixed;
+    top: 0;
+    width: 99.9%;
+    z-index: 300;
 }
 
