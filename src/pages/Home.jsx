@@ -5,20 +5,16 @@ import Banner from '../components/Banner'
 import Item from '../components/Item'
 import ItemList from '../components/ItemList'
 import Title from '../components/Title'
+import Main from '../components/Main'
 
 const Home = () => {
   return (
     <div>
         <div className="home">
             <Header />
-            {/* <Indicator>Home</Indicator> */}
             <div className='home-inner'>
-              <Banner />
-              <Title >Houses on island</Title>
-              <ItemList />
-
-              <Title >Houses on main land</Title>
-              <ItemList />
+              <Banner /> 
+              <Main />
             </div>
         </div>
     </div>

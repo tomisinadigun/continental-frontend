@@ -257,14 +257,9 @@ $spacing-navlink: 24px;
             }
         }
         .decision-btns {
-            width: 240px;
-            position: absolute;
-            transform: translateY(-150%) ;
-            // display: flex;
-            flex-direction: column;
+            display: flex;
             justify-content: space-between;
-            gap: 10px;
-            
+            margin-top: 20px;
             div {
                 text-align: center;
                 @include tablets {
@@ -272,12 +267,11 @@ $spacing-navlink: 24px;
                     padding-inline: 10px;
                 }
                 button {
-                    background-color: white;
+                    background-color:$color-primary;
                     font-family: $font-family-pop;
-                    padding: 10px 28px;
+                    padding: 8px 15px;
                     border: none;
                     color: white;
-                    background-color: rgb(0, 0, 0, 0.5);
                     &:hover {
                         cursor: pointer;
                         background-color:black ;
@@ -304,11 +298,14 @@ $spacing-navlink: 24px;
         .item-desc {
             position: absolute;
             top: 0;
-            background-color: white;
-            width: 240px;
+            left: 0;
+            background-color: rgb(255, 255, 255, 0.8);
+            width: 100%;
+            height: 100%;
             padding: 20px 20px;
             box-shadow: 0px 0px 2px 3px rgb(211, 211, 211, 0.4);
             border-radius: 5px 5px 5px 5px;
+            
             @include tablets{
                 width: 406px;
             }
@@ -321,7 +318,7 @@ $spacing-navlink: 24px;
                 align-items: center;
                 // gap: 20px;
                 span {
-                    color: grey;
+                    color: rgb(111, 110, 110);
                     font-family: $font-family-dongle;
                     font-size: 24px;
                 }
@@ -364,6 +361,62 @@ $spacing-navlink: 24px;
     }
 }
 
+.body-container {
+    display: flex;
+    gap: 10px;
+    .side-bar {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        // border: 1px solid black;
+        .searchForm {
+            input {
+                width: 100%;
+                height: 30px;
+                padding-inline: 10px;
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        .rangeInput {
+            input {
+                width: 100%;
+            }
+        }
+
+        .tags{
+            .tag-item {
+                width: fit-content;
+                padding: 6px 12px;
+                border-radius: 28px;
+                background-color: lightgray;
+                color: black;
+                font-weight: bold;
+                font-family: $font-family-lumanisimo;
+                font-size: 12px;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .main-bar {
+        flex: 4;
+        border: 1px solid red;
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -374,14 +427,14 @@ $spacing-navlink: 24px;
 }
 .show-detail {
     display: block;
-    transform: translateY(-100%);
+    transform: translateY(0%);
     animation-name: animate-detail;
     animation-duration: 0.6s;
 }
 
 @keyframes animate-detail {
-    from{transform: translateY(0%); opacity: 0;}
-    to{transform: translateY(-100%); opacity: 1;}
+    from{transform: translateY(-100%); opacity: 0;}
+    to{transform: translateY(0%); opacity: 1;}
 }
 
 .hide-action-btns{

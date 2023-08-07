@@ -5,18 +5,7 @@ import Topbar from './Topbar'
 import { useState } from 'react'
 
 const Navbar = () => {
-    // const [fix, setFix] = useState(false);
-
-    // function setFixed(){
-    //     if(window.scrollY >= 204){
-    //         setFix(true)
-    //     }else if(window.scrollY == 0) {
-    //         setFix(false)
-    //     }
-
-    // }
-
-    // window.addEventListener("scroll", setFixed)
+    
   return (
     <>
         <div className='adjust-bar'>
