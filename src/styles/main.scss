@@ -33,6 +33,7 @@ $spacing-navlink: 24px;
 
 
 
+
 .header {
     .top-bar {
         display: flex;
@@ -111,6 +112,8 @@ $spacing-navlink: 24px;
         }
 
         .logo {
+            display: flex;
+            justify-content: space-between;
             flex-basis: 1;
             @include tablets{
                 width: 100%;
@@ -126,6 +129,16 @@ $spacing-navlink: 24px;
                     font-weight: 550;
                     font-size: 30px;
                     letter-spacing: 12px;
+                    @include tablets {
+                        font-size: 24px;
+                    }
+                }
+            }
+            .menu-icon {
+                width: 30px;
+                display: none;
+                @include tablets {
+                    display: block;
                 }
             }
         }
@@ -364,16 +377,23 @@ $spacing-navlink: 24px;
 .body-container {
     display: flex;
     gap: 10px;
+    margin-top: 30px;
     .side-bar {
-        flex: 1.3;
+        flex: 1.2;
         display: flex;
         flex-direction: column;
         gap: 20px;
+        padding-block: 10px;
+        padding-inline: 8px;
         .searchForm {
             input {
                 width: 100%;
-                height: 30px;
-                padding-inline: 10px;
+                height: 40px;
+                padding-inline: 12px;
+                border-radius: 28px;
+                font-size: 24px;
+                font-family: $font-family-dongle;
+                border: 1px solid $color-primary;
                 &:focus {
                     outline: none;
                 }
@@ -400,6 +420,16 @@ $spacing-navlink: 24px;
         .rangeInput {
             input {
                 width: 100%;
+                &::-ms-fill-upper {
+                    background-color: $color-primary;
+                }
+                &::-ms-fill-lower {
+                    background-color: $color-primary;
+                }
+                &::-ms-fill{
+                    background-color: $color-primary;
+                }
+                
             }
         }
 
@@ -427,7 +457,9 @@ $spacing-navlink: 24px;
     }
     .main-bar {
         flex: 4;
-        border: 1px solid red;
+    }
+    @include tablets {
+        flex-direction: column;
     }
 }
 
@@ -474,17 +506,25 @@ $spacing-navlink: 24px;
 }
 
 // fix navbar 
-.adjust-bar {
-    height: 120px;
-}
-
-
-
-.fix-nav-bar{
+.fixed-header {
     position: fixed;
     top: 0;
-    width: 99.9%;
-    z-index: 300;
+    left: 0;
+    right: 0;
+    background-color: #fff; /* Customize the background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow for a visual effect */
+    z-index: 1000; /* Adjust the z-index as needed */
+    animation-name: anim-header;
+    animation-duration: 1s;
+}
+
+@keyframes anim-header {
+    from {transform: translateY(-200%);}
+    to {transform: translateY(0%);}
+}
+
+.adjust-header {
+    height: 120px;
 }
 
 // tags 
@@ -500,5 +540,23 @@ $spacing-navlink: 24px;
     transition: 0.5s;
     &:hover {
         cursor: pointer;
+    }
+}
+
+.fixed-sidebar {
+    position: fixed;
+    top: 19%;
+    // left: 0;
+    // right: 0;
+    width: 285px;
+    background-color: #fff; /* Customize the background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow for a visual effect */
+    z-index: 1000; /* Adjust the z-index as needed */
+   
+}
+.adjust-sidebar {
+    flex-basis: 296px;
+    @include tablets {
+        display: none;
     }
 }

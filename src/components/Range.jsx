@@ -1,17 +1,21 @@
 import React, {useState} from 'react'
 
 const Range = () => {
-
+  let minPropertyPrice = 25000;
+  let maxPropertyPrice = 25000000;
+  minPropertyPrice = minPropertyPrice.toLocaleString();
+  // maxPropertyPrice = maxPropertyPrice.toLocaleString();
+  
   const [minPercent, setMinPercent] = useState(10)
   const [maxPercent, setMaxPercent] = useState(10)
-  const [maxPrice, setMaxPrice] = useState(2000)
-  const minPropertyPrice = 25000
-  const maxPropertyPrice = 25000000
+  const [maxPrice, setMaxPrice] = useState(minPropertyPrice)
+  
   const handleMinPriceRange = (e) => {
     const percentChange = parseInt(e.target.value)
     const price = percentChange / 100 * maxPropertyPrice
+    
     setMaxPercent(percentChange)
-    setMaxPrice(Math.floor(price))
+    setMaxPrice(price.toLocaleString())
   }
 
   
@@ -26,6 +30,7 @@ const Range = () => {
             <input type="range"
               value={maxPercent >= 10 ? maxPercent : minPercent}
               onChange={handleMinPriceRange}
+              
             />
         </div>
     </div>
