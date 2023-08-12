@@ -2,6 +2,7 @@ import React from 'react'
 import Search from './Search'
 import Range from './Range'
 import Tags from './Tags'
+import { useDispatch, useSelector } from 'react-redux'
 import { useState, useEffect } from 'react'
 
 const SideBar = () => {
@@ -34,8 +35,10 @@ const SideBar = () => {
     <div className={isFixed ? "adjust-sidebar" : "side-bar"}>
       <div className={isFixed ? 'fixed-sidebar side-bar' : 'side-bar'}>
         <Search />
-        <Range />
-        <Tags />
+        <div className='range-tag'>
+          <Range />
+          <Tags />
+        </div>
       </div>
     </div>
   )

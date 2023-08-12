@@ -137,6 +137,9 @@ $spacing-navlink: 24px;
             .menu-icon {
                 width: 30px;
                 display: none;
+                &:hover{
+                    cursor: pointer;
+                }
                 @include tablets {
                     display: block;
                 }
@@ -451,8 +454,19 @@ $spacing-navlink: 24px;
             gap: 5px;
             flex-wrap: wrap;
         }
+        .range-tag {
+            @include tablets {
+                display: none;
+            }
+        }
         @include tablets {
-            display: none;
+            // display: none;
+            position: fixed;
+            top: 17%;
+            left: 0;
+            right: 0;
+            z-index: 900;
+
         }
     }
     .main-bar {
@@ -460,6 +474,7 @@ $spacing-navlink: 24px;
     }
     @include tablets {
         flex-direction: column;
+        
     }
 }
 
@@ -546,17 +561,18 @@ $spacing-navlink: 24px;
 .fixed-sidebar {
     position: fixed;
     top: 19%;
-    // left: 0;
-    // right: 0;
     width: 285px;
     background-color: #fff; /* Customize the background color */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow for a visual effect */
     z-index: 1000; /* Adjust the z-index as needed */
+    @include tablets {
+       width: 100%;
+    }
    
 }
 .adjust-sidebar {
     flex-basis: 296px;
     @include tablets {
-        display: none;
+        position: absolute;
+        border: 1px solid black;
     }
 }

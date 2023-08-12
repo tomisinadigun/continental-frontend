@@ -2,12 +2,17 @@ import React from 'react'
 import { Link } from "react-router-dom"
 import Topbar from './Topbar'
 import menuIcon from "../assets/menuicon.svg"
-
+import { useDispatch, useSelector } from 'react-redux'
+import { toggle } from '../features/toggleSlice'
 import { useState, useEffect } from 'react'
 
 const Navbar = () => {
+    const menuCheck = useSelector((state) => state.toggle)
+    const dispatch = useDispatch()
+    
 
     const [isFixed, setIsFixed] = useState(false);
+    
 
   const handleScroll = () => {
     // Calculate the scroll position threshold where you want the element to become fixed
@@ -44,7 +49,7 @@ const Navbar = () => {
                             <li><div className='nav-item'><a>Contact us</a><hr /></div></li>
                         </ul>
                     </div>
-                    <div className="logo"><Link to="/"><p>CONTINENTAL</p></Link> <img src={menuIcon} alt="" className='menu-icon' /> </div>
+                    <div className="logo"><Link to="/"><p>CONTINENTAL</p></Link> <img src={menuIcon} alt="" className='menu-icon' onClick={() => dispatch(toggle())} /> </div>
                     <div className="right-nav all-nav">
                         <ul>
                             <li>
