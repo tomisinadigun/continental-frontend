@@ -461,6 +461,7 @@ $spacing-navlink: 24px;
         }
         @include tablets {
             // display: none;
+            background-color: transparent;
             position: fixed;
             top: 17%;
             left: 0;
