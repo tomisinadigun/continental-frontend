@@ -479,6 +479,51 @@ $spacing-navlink: 24px;
     }
 }
 
+// authentication page 
+.authenticate {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+        font-family: $font-family-dongle;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        margin-top:6px;
+        font-weight: bold;
+        
+    }
+    .auth-input {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        input {
+            height: 38px;
+            width: 300px;
+            padding-inline: 10px;
+            border-radius: 8px;
+            border: 1px solid $color-primary;
+            &:focus {
+                outline: $color-primary;
+            }
+        }
+        button {
+            font-family: $font-family-dongle;
+            font-size: 26px;
+            background-color: $color-primary;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+    }
+    .switch-auth {
+        color: $color-primary;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
 
 
 
