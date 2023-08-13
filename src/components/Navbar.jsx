@@ -2,13 +2,17 @@ import React from 'react'
 import { Link } from "react-router-dom"
 import Topbar from './Topbar'
 import menuIcon from "../assets/menuicon.svg"
+import cancelIcon from "../assets/cancel.svg"
 import { useDispatch, useSelector } from 'react-redux'
 import { toggle } from '../features/toggleSlice'
+import { showMenu } from '../features/menuSlice'
 import { useState, useEffect } from 'react'
 
 const Navbar = () => {
-    const menuCheck = useSelector((state) => state.toggle)
+    const menu = useSelector((state) => state.menu)
     const dispatch = useDispatch()
+
+
     
 
     const [isFixed, setIsFixed] = useState(false);
@@ -49,7 +53,10 @@ const Navbar = () => {
                             <li><div className='nav-item'><a>Contact us</a><hr /></div></li>
                         </ul>
                     </div>
-                    <div className="logo"><Link to="/"><p>CONTINENTAL</p></Link> <img src={menuIcon} alt="" className='menu-icon' onClick={() => dispatch(toggle())} /> </div>
+                    <div className="logo">
+                        <Link to="/"><p>CONTINENTAL</p></Link> 
+                        <img src={ !menu? menuIcon : cancelIcon } alt="" className='menu-icon' onClick={() => dispatch(showMenu())} /> 
+                    </div>
                     <div className="right-nav all-nav">
                         <ul>
                             <li>
@@ -68,6 +75,24 @@ const Navbar = () => {
                     </div>
                 </nav>
             </div>
+        </div>
+
+        <div className={menu ? "hidden-menu display-menu": "hidden-menu hide-menu"}>
+            <ul>
+                <li><div className='nav-item'><a>Properties</a></div></li>
+                <li><div className='nav-item'><a>Properties</a></div></li>
+                <li><div className='nav-item'><a>Contact us</a></div></li>
+                <li>
+                    <div className="nav-item">
+                        <Link to="/sign_up">Sing Up</Link>
+                    </div>
+                </li>
+                <li>
+                    <div className="nav-item">
+                        <Link to="/cart">Wish List</Link>
+                    </div>
+                </li>
+            </ul>
         </div>
     </>
   )
