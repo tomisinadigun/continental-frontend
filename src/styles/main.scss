@@ -507,6 +507,9 @@ $spacing-navlink: 24px;
             &:focus {
                 outline: $color-primary;
             }
+            @include mobile {
+                width: 350px;
+            }
         }
         button {
             font-family: $font-family-dongle;
@@ -528,6 +531,7 @@ $spacing-navlink: 24px;
         line-height: normal;
         font-weight: 550;
         font-size: 16px;
+        font-weight: bold;
         letter-spacing: 12px;
         text-align: center;
         justify-content: center;
