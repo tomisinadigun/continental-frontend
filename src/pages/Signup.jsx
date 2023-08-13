@@ -16,6 +16,7 @@ const Signup = () => {
       {
         !isUser ?
           <div className="sign-up">
+            <p className='logo'>CONTINENTAL</p>
             <div className='auth-input'>
               <input type="email" name="email" id="email" placeholder='Email' />
               <input type="password" name="password" id="password" placeholder='Password' />
@@ -25,6 +26,7 @@ const Signup = () => {
           </div>
         : 
           <div className="sign-up">
+            <p className='logo'>CONTINENTAL</p>
             <div className='auth-input'>
               <input type="text" name="name" id="name" placeholder='Name' />
               <input type="email" name="email" id="email" placeholder='Email' />

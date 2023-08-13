@@ -523,6 +523,16 @@ $spacing-navlink: 24px;
             cursor: pointer;
         }
     }
+    .logo {
+        font-family: $font-family-lumanisimo;
+        line-height: normal;
+        font-weight: 550;
+        font-size: 16px;
+        letter-spacing: 12px;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
 }
 
 
